@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+                function sequence() {
+                    let seq = 0;
+                    return function(){return ++seq;};
+                };
+                console.log(sequence()());   
+                console.log(sequence()());  
+                console.log(sequence()());  
+            }
+        </script>
+    </head>
+
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+    </body>
+</html>

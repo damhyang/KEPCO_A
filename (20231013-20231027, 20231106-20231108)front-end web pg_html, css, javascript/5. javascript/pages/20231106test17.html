@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        const array = [1, 2, 3, 4, 5];
+        console.log(array);
+        let lastValue=array.pop();
+        let firstValue=array.shift();
+
+        console.log(array);
+        console.log(lastValue);  //5
+        console.log(firstValue);  //1
+
+        array.push(firstValue);   //end of array insert
+        array.unshift(lastValue);  //start of array insert
+
+        console.log(array);
+    </script>
+</body>
+</html>

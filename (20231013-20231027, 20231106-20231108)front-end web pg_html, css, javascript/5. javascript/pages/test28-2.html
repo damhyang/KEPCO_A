@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+                const date = new Date();
+                let hour = date.getHours();
+            
+                if(hour>18){
+                    document.body.style.backgroundImage='url(https://img.hani.co.kr/imgdb/resize/2022/1111/166805752510_20221111.JPG)';
+                }else if(hour>12){
+                    document.body.style.backgroundImage='url(https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202310/13/63ef3e56-4f29-4cb6-ab05-0ba4f8506727.jpg)';
+                }else{
+                    document.body.style.backgroundImage='url(https://png.pngtree.com/thumb_back/fh260/png-vector/20200530/ourmid/pngtree-autumn-equinox-png-image_2214175.jpg)';
+                };
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+    </body>
+</html>

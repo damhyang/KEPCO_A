@@ -1,0 +1,977 @@
+
+user@LAPTOP-GAGMD1D0 MINGW64 ~
+$ cd c:/project1
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git log
+commit 66a78128e6c0ed90acad57c44c720e08c3127a83 (HEAD -> main, iss53)
+Author: damhyang <damhyangkim@gmail.com>
+Date:   Tue Dec 5 10:25:29 2023 +0900
+
+    other modified 4
+
+commit ee5e8955823b48630dddbdb5292a1ad642a3e52f
+Author: damhyang <damhyangkim@gmail.com>
+Date:   Tue Dec 5 09:44:25 2023 +0900
+
+    add 2
+
+commit b9b87d431dbb9a37c2532afc8d3850a55cd47f58
+Author: damhyang <damhyangkim@gmail.com>
+Date:   Tue Dec 5 09:37:48 2023 +0900
+
+    create file first commit 1
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git checkout -d iss53
+HEAD is now at 66a7812 other modified 4
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 ((66a7812...))
+$ git status
+HEAD detached at refs/heads/iss53
+nothing to commit, working tree clean
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 ((66a7812...))
+$ git checkout -b iss53
+fatal: a branch named 'iss53' already exists
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 ((66a7812...))
+$ git checkout iss53
+Switched to branch 'iss53'
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ git log --decorate --oneline --all --graph
+* 66a7812 (HEAD -> iss53, main) other modified 4
+| * 3bf2761 (testing) modified 3
+|/
+* ee5e895 add 2
+* b9b87d4 create file first commit 1
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ git status
+On branch iss53
+nothing to commit, working tree clean
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ git checkout main
+Switched to branch 'main'
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git staus
+git: 'staus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git checkout iss53
+Switched to branch 'iss53'
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ echo issue >> test4.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ git status
+On branch iss53
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test4.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ git commit -a -m "new footer 5"
+warning: in the working copy of 'test4.txt', LF will be replaced by CRLF the next time Git touches it
+[iss53 39494e1] new footer 5
+ 1 file changed, 1 insertion(+)
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ ls
+test1.txt  test2.txt  test3.txt  test4.txt  test5.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ vi test4.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ cat test4.txt
+test4
+issue
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ git log --oneline --decorate --all --graph
+* 39494e1 (HEAD -> iss53) new footer 5
+* 66a7812 (main) other modified 4
+| * 3bf2761 (testing) modified 3
+|/
+* ee5e895 add 2
+* b9b87d4 create file first commit 1
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ git checkout main
+Switched to branch 'main'
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ cat test4.txt
+test4
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git checkout -b hotfix
+Switched to a new branch 'hotfix'
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (hotfix)
+$ hoㅅfix는 급하게 고쳐야하는 상황이다.즉 급하다는 뜻인데 반댓말은 cold라 하고, 상태유지는 freeze라고 한다.
+bash: hoㅅfix는: command not found
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (hotfix)
+$ git branch
+* hotfix
+  iss53
+  main
+  testing
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (hotfix)
+$ git log --oneline --decorate --all --graph
+* 39494e1 (iss53) new footer 5
+* 66a7812 (HEAD -> hotfix, main) other modified 4
+| * 3bf2761 (testing) modified 3
+|/
+* ee5e895 add 2
+* b9b87d4 create file first commit 1
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (hotfix)
+$ cat test4.txt
+test4
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (hotfix)
+$ echo issue completed!! >> test4.txt
+echo issue completedcat test4.txt  >> test4.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (hotfix)
+$ git commit -a -m "fixed completed 6"
+warning: in the working copy of 'test4.txt', LF will be replaced by CRLF the next time Git touches it
+[hotfix a04db14] fixed completed 6
+ 1 file changed, 1 insertion(+)
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (hotfix)
+$ git log --oneline --decorate --all --graph
+* a04db14 (HEAD -> hotfix) fixed completed 6
+| * 39494e1 (iss53) new footer 5
+|/
+* 66a7812 (main) other modified 4
+| * 3bf2761 (testing) modified 3
+|/
+* ee5e895 add 2
+* b9b87d4 create file first commit 1
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (hotfix)
+$ git checkout main
+Switched to branch 'main'
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ cat test4.txt
+test4
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git checkout hotfix
+Switched to branch 'hotfix'
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (hotfix)
+$ cat test4.txt
+test4
+issue completedcat test4.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (hotfix)
+$ git checkout iss53
+Switched to branch 'iss53'
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ cat test4.txt
+test4
+issue
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ git branch
+  hotfix
+* iss53
+  main
+  testing
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ git log --oneline --decorate --all --graph
+* a04db14 (hotfix) fixed completed 6
+| * 39494e1 (HEAD -> iss53) new footer 5
+|/
+* 66a7812 (main) other modified 4
+| * 3bf2761 (testing) modified 3
+|/
+* ee5e895 add 2
+* b9b87d4 create file first commit 1
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ git checkout main
+Switched to branch 'main'
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git merge hotfix
+Updating 66a7812..a04db14
+Fast-forward
+ test4.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ cat test4.txt
+test4
+issue completedcat test4.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ ^C
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ ^C
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ 3교시
+bash: 3교시: command not found
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git log --oneline --decorate --all --graph
+* a04db14 (HEAD -> main, hotfix) fixed completed 6
+| * 39494e1 (iss53) new footer 5
+|/
+* 66a7812 other modified 4
+| * 3bf2761 (testing) modified 3
+|/
+* ee5e895 add 2
+* b9b87d4 create file first commit 1
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ cat test4.txt
+test4
+issue completedcat test4.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ vi test4.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git branch -d hotfix
+Deleted branch hotfix (was a04db14).
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git log --oneline --decorate --all --graph
+* a04db14 (HEAD -> main) fixed completed 6
+| * 39494e1 (iss53) new footer 5
+|/
+* 66a7812 other modified 4
+| * 3bf2761 (testing) modified 3
+|/
+* ee5e895 add 2
+* b9b87d4 create file first commit 1
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ cat test4.txt
+test4
+issue completedcat test4.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git checkout iss53
+Switched to branch 'iss53'
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ cat test4.txt
+test4
+issue
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ git echo my job finished >> test4.txt
+git: 'echo' is not a git command. See 'git --help'.
+
+The most similar command is
+        fetch
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ cat test4.txt
+test4
+issue
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ echo my job finished >> test4.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ cat test4.txt
+test4
+issue
+my job finished
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ git commit -a -m "iss53 finished"
+warning: in the working copy of 'test4.txt', LF will be replaced by CRLF the next time Git touches it
+[iss53 d9aaaaf] iss53 finished
+ 1 file changed, 1 insertion(+)
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ git log --oneline --decorate --all --graph
+* d9aaaaf (HEAD -> iss53) iss53 finished
+* 39494e1 new footer 5
+| * a04db14 (main) fixed completed 6
+|/
+* 66a7812 other modified 4
+| * 3bf2761 (testing) modified 3
+|/
+* ee5e895 add 2
+* b9b87d4 create file first commit 1
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ git checkout main
+Switched to branch 'main'
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ cat test4.txt
+test4
+issue completedcat test4.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git merge iss53
+Auto-merging test4.txt
+CONFLICT (content): Merge conflict in test4.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ git checkout iss53
+error: you need to resolve your current index first
+test4.txt: needs merge
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ cat test4.txt
+test4
+<<<<<<< HEAD
+issue completedcat test4.txt
+=======
+issue
+my job finished
+>>>>>>> iss53
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ git status
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   test4.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ git checkout iss53
+error: you need to resolve your current index first
+test4.txt: needs merge
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ git merge iss53
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ git status
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   test4.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ git add .
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ git status
+On branch main
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   test4.txt
+
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ git commit -m "merge iss53 7"
+[main df03917] merge iss53 7
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ cat test4.txt
+test4
+<<<<<<< HEAD
+issue completedcat test4.txt
+=======
+issue
+my job finished
+>>>>>>> iss53
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git merge iss53
+Already up to date.
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ cat test4.txt
+test4
+<<<<<<< HEAD
+issue completedcat test4.txt
+=======
+issue
+my job finished
+>>>>>>> iss53
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ ls
+test1.txt  test2.txt  test3.txt  test4.txt  test5.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git log --oneline --decorate --all --graph
+*   df03917 (HEAD -> main) merge iss53 7
+|\
+| * d9aaaaf (iss53) iss53 finished
+| * 39494e1 new footer 5
+* | a04db14 fixed completed 6
+|/
+* 66a7812 other modified 4
+| * 3bf2761 (testing) modified 3
+|/
+* ee5e895 add 2
+* b9b87d4 create file first commit 1
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git checkout iss53
+Switched to branch 'iss53'
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ echo continuing test >> test4.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ git commit -a -m "issue...   8"
+warning: in the working copy of 'test4.txt', LF will be replaced by CRLF the next time Git touches it
+
+[iss53 33f53b8] issue...   8
+ 1 file changed, 1 insertion(+)
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ git log --all --graph --oneline --decorate
+* 33f53b8 (HEAD -> iss53) issue...   8
+| *   df03917 (main) merge iss53 7
+| |\
+| |/
+|/|
+* | d9aaaaf iss53 finished
+* | 39494e1 new footer 5
+| * a04db14 fixed completed 6
+|/
+* 66a7812 other modified 4
+| * 3bf2761 (testing) modified 3
+|/
+* ee5e895 add 2
+* b9b87d4 create file first commit 1
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ cat test4.txt
+test4
+issue
+my job finished
+continuing test
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (iss53)
+$ git checkout main
+Switched to branch 'main'
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ cat test4.txt
+test4
+<<<<<<< HEAD
+issue completedcat test4.txt
+=======
+issue
+my job finished
+>>>>>>> iss53
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git log --all --graph --oneline --decorate
+* 33f53b8 (iss53) issue...   8
+| *   df03917 (HEAD -> main) merge iss53 7
+| |\
+| |/
+|/|
+* | d9aaaaf iss53 finished
+* | 39494e1 new footer 5
+| * a04db14 fixed completed 6
+|/
+* 66a7812 other modified 4
+| * 3bf2761 (testing) modified 3
+|/
+* ee5e895 add 2
+* b9b87d4 create file first commit 1
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git merge iss53
+Auto-merging test4.txt
+CONFLICT (content): Merge conflict in test4.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ git status
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   test4.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ git commit -a -m "real final !!"
+git commit -a -m "real final git status"
+[main 82401b1] real final git status
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git log --all --graph --oneline --decorate
+*   82401b1 (HEAD -> main) real final git status
+|\
+| * 33f53b8 (iss53) issue...   8
+* | df03917 merge iss53 7
+|\|
+| * d9aaaaf iss53 finished
+| * 39494e1 new footer 5
+* | a04db14 fixed completed 6
+|/
+* 66a7812 other modified 4
+| * 3bf2761 (testing) modified 3
+|/
+* ee5e895 add 2
+* b9b87d4 create file first commit 1
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ cat test4.txt
+test4
+<<<<<<< HEAD
+issue completedcat test4.txt
+=======
+issue
+my job finished
+<<<<<<< HEAD
+>>>>>>> iss53
+=======
+continuing test
+>>>>>>> iss53
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git branch -d iss53
+Deleted branch iss53 (was 33f53b8).
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git branch
+* main
+  testing
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ cat test4.txt
+test4
+<<<<<<< HEAD
+issue completedcat test4.txt
+=======
+issue
+my job finished
+<<<<<<< HEAD
+>>>>>>> iss53
+=======
+continuing test
+>>>>>>> iss53
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git log --all --graph --oneline --decorate
+*   82401b1 (HEAD -> main) real final git status
+|\
+| * 33f53b8 issue...   8
+* | df03917 merge iss53 7
+|\|
+| * d9aaaaf iss53 finished
+| * 39494e1 new footer 5
+* | a04db14 fixed completed 6
+|/
+* 66a7812 other modified 4
+| * 3bf2761 (testing) modified 3
+|/
+* ee5e895 add 2
+* b9b87d4 create file first commit 1
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git checkout testing
+Switched to branch 'testing'
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (testing)
+$ git checkout main
+Switched to branch 'main'
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ echo test6 > test6.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git commit -a -m "realreal end"
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test6.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test6.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git add .
+warning: in the working copy of 'test6.txt', LF will be replaced by CRLF the next time Git touches it
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   test6.txt
+
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git commit -m "realreal end"
+[main 97c7d6a] realreal end
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test6.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git checkout testing
+Switched to branch 'testing'
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (testing)
+$ ls
+test1.txt  test2.txt  test3.txt  test4.txt  test5.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (testing)
+$ cat test4.txt
+test4
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (testing)
+$ cat test3.txt | >> test3.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (testing)
+$ cat test3.txt
+test3
+test3
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (testing)
+$ |모양은 파이프로 해당 경로를 타라는 뜻.
+bash: syntax error near unexpected token `|'
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (testing)
+$ git status
+On branch testing
+nothing to commit, working tree clean
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (testing)
+$ echo test... >> test3.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (testing)
+$ cat test3.txt
+test3
+test3
+test...
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (testing)
+$ git status
+On branch testing
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (testing)
+$ git commit -a -m "modified test3.txt"
+warning: in the working copy of 'test3.txt', LF will be replaced by CRLF the next time Git touches it
+[testing 296d6d5] modified test3.txt
+ 1 file changed, 1 insertion(+)
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (testing)
+$ git log --oneline --decorate --graph --all
+* 296d6d5 (HEAD -> testing) modified test3.txt
+* 3bf2761 modified 3
+| * 97c7d6a (main) realreal end
+| *   82401b1 real final git status
+| |\
+| | * 33f53b8 issue...   8
+| * | df03917 merge iss53 7
+| |\|
+| | * d9aaaaf iss53 finished
+| | * 39494e1 new footer 5
+| * | a04db14 fixed completed 6
+| |/
+| * 66a7812 other modified 4
+|/
+* ee5e895 add 2
+* b9b87d4 create file first commit 1
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (testing)
+$ git checkout main]
+error: pathspec 'main]' did not match any file(s) known to git
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (testing)
+$ git checkout main
+Switched to branch 'main'
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git test3.txt
+git: 'test3.txt' is not a git command. See 'git --help'.
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ cat test3.txt
+test3
+test...
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git merge testing
+Auto-merging test3.txt
+CONFLICT (content): Merge conflict in test3.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ git status
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   test3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ cat ~/.gitconfig
+[user]
+        name = damhyang
+        email = damhyangkim@gmail.com
+[init]
+        defaultBranch = main
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ git config --global merge.tool p4mergetool
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ cat ~/.gitconfig
+[user]
+        name = damhyang
+        email = damhyangkim@gmail.com
+[init]
+        defaultBranch = main
+[merge]
+        tool = p4mergetool
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ git mergetool
+git config option merge.tool set to unknown tool: p4mergetool
+Resetting to default...
+
+This message is displayed because 'merge.tool' is not configured.
+See 'git mergetool --tool-help' or 'git help config' for more details.
+'git mergetool' will now attempt to use one of the following tools:
+opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge araxis bc codecompare smerge emerge vimdiff nvimdiff
+Merging:
+test3.txt
+
+Normal merge conflict for 'test3.txt':
+  {local}: modified file
+  {remote}: modified file
+Hit return to start merge resolution tool (vimdiff):
+4 files to edit
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ vi test3.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ git status
+On branch main
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   test3.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   test3.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test3.txt.orig
+
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ git add .
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main|MERGING)
+$ git commit -m "really end"
+[main 08e7f9e] really end
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ ls
+test1.txt  test2.txt  test3.txt  test3.txt.orig  test4.txt  test5.txt  test6.txt
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ merge시에는 orig파일이 존재.
+bash: merge시에는: command not found
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ cat test3.txt.orig
+test3
+<<<<<<< HEAD
+=======
+test3
+>>>>>>> testing
+test...
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ cat test3.txt
+test3
+test3
+test...
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ ^C
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ git log --oneline --decorate --graph --all
+*   08e7f9e (HEAD -> main) really end
+|\
+| * 296d6d5 (testing) modified test3.txt
+| * 3bf2761 modified 3
+* | 97c7d6a realreal end
+* |   82401b1 real final git status
+|\ \
+| * | 33f53b8 issue...   8
+* | | df03917 merge iss53 7
+|\| |
+| * | d9aaaaf iss53 finished
+| * | 39494e1 new footer 5
+* | | a04db14 fixed completed 6
+|/ /
+* / 66a7812 other modified 4
+|/
+* ee5e895 add 2
+* b9b87d4 create file first commit 1
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ cd \
+> cd /
+bash: cd: too many arguments
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/project1 (main)
+$ cd ..
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c
+$ cd work/html_second
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/work/html_second
+$ git init
+Initialized empty Git repository in C:/work/html_second/.git/
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/work/html_second (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+        pages/
+        statics/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/work/html_second (main)
+$ git add .
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/work/html_second (main)
+$ git commit -m "front end first project"
+[main (root-commit) 2237783] front end first project
+ 10 files changed, 378 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 pages/button.html
+ create mode 100644 pages/dropdownlink.html
+ create mode 100644 pages/ex1.html
+ create mode 100644 pages/ex2.html
+ create mode 100644 pages/form.html
+ create mode 100644 pages/ifame.html
+ create mode 100644 pages/modal.html
+ create mode 100644 pages/mutimedia.html
+ create mode 100644 statics/css/style.css
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/work/html_second (main)
+$ ^[[200~OP-GAGMD1D0 MINGW64 /c/work/html_second (main)
+bash: syntax error near unexpected token `('
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/work/html_second (main)
+$ git remote add frontend https://github.com/damhyang/KEPCO_A_FRONTEND.git
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/work/html_second (main)
+$ git remote -v
+frontend        https://github.com/damhyang/KEPCO_A_FRONTEND.git (fetch)
+frontend        https://github.com/damhyang/KEPCO_A_FRONTEND.git (push)
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/work/html_second (main)
+$ git branch
+* main
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/work/html_second (main)
+$ git push -u frontend main
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (15/15), 5.00 KiB | 2.50 MiB/s, done.
+Total 15 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/damhyang/KEPCO_A_FRONTEND.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'frontend/main'.
+
+user@LAPTOP-GAGMD1D0 MINGW64 /c/work/html_second (main)
+$

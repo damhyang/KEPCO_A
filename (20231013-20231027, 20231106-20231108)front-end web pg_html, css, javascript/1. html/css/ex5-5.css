@@ -1,0 +1,18 @@
+body{
+    margin:0px;   
+}
+h3{
+    border:solid 1px green;
+    margin:50px 40px 30px 40px;
+}
+p{
+    border:solid 1px green;
+    margin:50px 40px;
+}
+
+
+/* *은 모든것으로 따로 마진설정이 안된 박스모델들에게 무조건 적으로 적용된다. */
+/* 
+*{
+    margin:0px;
+} */

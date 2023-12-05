@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>가상요소 선택자 : after, before, selection</title>
+    <style>
+        a:link{
+            text-decoration: none;
+            font-size: 0.7rem;
+        }
+        a::before{
+            content:"앵커태그 - " ;
+            color:skyblue;
+        }
+        a:active::after{
+            content: "('attr(href)')";
+            color:purple;
+        }
+        a::selection{
+            background-color: cyan;
+        }
+        a:visited {color: blue;}
+        a:active { color: yellow; }
+
+    </style>
+
+</head>
+<body>
+    <a href="http://ggoreb.com">GGoReb</a><br>
+    <a href="http://www.zdnet.co.kr">ZDNET</a><br>
+    <a href="http://www.oss.kr">공개SW포털</a><br>
+    <a href="http://bloter.net">블로터</a>
+    
+</body>
+</html>
+

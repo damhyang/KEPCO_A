@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function getApple(){
+            return new Promise(resolve=>{
+                setTimeout(resolve("🍎🍎"),1000);
+            });
+        }
+
+        function getKiwi(){
+            return new Promise(resolve=>{
+                setTimeout(resolve("🥝🥝"),1000);
+            });
+        }
+
+        function getMango(){
+            return new Promise(resolve=>{
+                setTimeout(resolve("🥭🥭"),1000);
+            });
+        }
+
+        function sell(){
+            return getApple().then(apple=>{
+                return getKiwi().then(kiwi=>{
+                    return getMango().then(mango=>{
+                        `${apple} + ${kiwi}+${mango}`
+                    })    
+                })
+            })         
+        }
+
+        async function aSell() {
+            const apple = await getApple(); 
+            const kiwi = await getKiwi();
+            return `${apple} + ${kiwi}`
+        }
+
+
+        sell().then(result=>console.log(result));
+        console.log(sell());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

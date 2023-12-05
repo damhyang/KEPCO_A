@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+                let score=[
+                    {"name":"A", "score":77},
+                    {"name":"B", "score":88},
+                    {"name":"C", "score":66},
+                    {"name":"D", "score":55}
+                ];
+                function checkData(data){
+                    const result = [];
+                    data.forEach(
+                        value=>{
+                            result.push(
+                                {
+                                    name:value.name, 
+                                    score:value.score,
+                                    pass:value.score>60?"pass":"fail"
+                                }
+                            )
+                        }
+                    )
+                    return result;
+                } 
+                rr=checkData(score);
+                console.log(rr);
+            }
+
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+    </body>
+</html>
+
+<!-- /*if(value 1% 2 == 0){
+    total+=value;
+}else{
+    total=total;
+}
+if(value 2% 2 == 0){
+    total+=value;
+}else{
+    total=total;
+}*/ -->

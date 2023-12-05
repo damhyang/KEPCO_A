@@ -1,0 +1,30 @@
+body{
+    margin: 0px auto;
+    padding:0px;
+
+}
+#wrapper{
+    background-color:#eeeeee;
+    width: 700px;
+    height:800px;
+}
+#header{
+    background-color:red;
+}
+#section{
+    background-color:orange;
+    width: 70%;
+    height: 60%;
+}
+
+/* 
+body
+    wrapper 
+    header
+        nav
+    section
+        section1
+        section2
+            article2
+    aside
+    footer */

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+                funcA();
+                function funcA() {
+                    console.log('java');
+                };
+                  
+                funcB();
+                const funcB = function() {
+                    console.log('script');
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+    </body>
+</html>

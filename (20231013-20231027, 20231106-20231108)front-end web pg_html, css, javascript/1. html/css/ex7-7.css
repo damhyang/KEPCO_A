@@ -1,0 +1,17 @@
+li{
+	list-style-type: none;
+	text-align: center;
+	display:inline;
+	font-size:12px;
+}
+a{
+	color:white;
+	background-color:green;
+}
+a:visited, a:active, a:link{
+	text-decoration:none;
+}
+a:hover{
+	background-color:orange;
+}
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KepcoA</title>
+</head>
+<body>
+    <h1>제목</h1>
+    <h3></h3>
+</body>
+
+<script>
+    document.body.onselectstart = () => false;
+    //document.body.onselectstart = false;
+
+    let count = 0;
+    h1=document.querySelector("h1");
+    h1.addEventListener("click", ()=> count++);
+
+
+    const content =  "클릭횟수 : " + count;
+    console.log(content);
+    //obj = document.body.h3;불가
+    //console.log(obj);불가
+    obj = document.querySelector("h3");
+    obj.textContent = content;
+    //document.body.innerHTML=obj.content;
+    //document.body.h3.innerHTML=obj.content;
+</script>
+
+</html>

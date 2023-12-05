@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>속성선택자</title>
+    <style>
+        h5[title]{background-color: red;}
+        h5[class~=header]{background-color: yellow;}  
+        h5[class=content]{background-color: purple;}
+        h5[class=contents]{background-color: purple;}
+        h5[class^=cont]{background-color: silver;}   
+        h5[class$=esc] { background-color: orange;}
+        h5[class*=tiv] { background-color : aqua; }
+
+
+    </style>
+</head>
+<body>
+    <h5>h5 제목</h5>
+<h5 title="제목1">h5 제목 1</h5> <!--가상의 속성 title에 red-->
+<h5 class="title header">h5 제목 2</h5> <!--header문자열 자식포함 yellow-->
+<h5 class="content">h5 제목 3</h5> 
+<h5 class="contents">h5 제목 3</h5>  <!--시작 문자열이 con이면 grey-->
+<h5 class="desc">h5 제목 4</h5>  <!--끝문자열이 esc이면 orange-->
+<h5 class="active">h5 제목 5</h5>   <!--포함하는 문자열 tiv aqua-->
+
+</body>
+</html><!--calss title의 하위를 가져오려면 ~=을 쓰면 된다.-->
+<!--calss라는 속성의 하위의 글자 일부가 cont이면 무조건 적용하려면 ^=을 쓰면 된다.-->

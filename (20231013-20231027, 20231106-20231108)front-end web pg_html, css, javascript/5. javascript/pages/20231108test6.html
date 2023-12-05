@@ -1,0 +1,30 @@
+<!-- //자바스크립트의 캔버스 객체를 이용하면 애니메이션이 더 좋다. 그러나 일단 이벤트 연습하자. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KepcoA</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    검색어 입력 : <input type="text" name="search" /> 
+    <!-- //input에 입력값은 input.value로 찾아올 수 있음. -->
+</body>
+
+<script>
+    //input창을 클릭해 커서가 깜빡일 때를 focus라고 함.
+    const input=document.querySelector("[name=search]");
+    console.log(input.value);
+    input.addEventListener("focus", (event)=>{
+        input.value+="#";
+    });
+    input.addEventListener("keyup", (event)=>{
+        if (event.keyCode==32){
+            input.value+="#";
+        }
+    });
+</script>
+</html>

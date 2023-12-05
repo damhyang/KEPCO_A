@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        class Rectangle{
+            constructor(width, height){
+                this.height = height;  
+                this.width=width;
+            }   
+
+            get height() {
+                return this._height;
+            }
+
+            set height(value){
+                this._height=value;
+            }   //get은 value를 쓸 필요가 없고, set은 value가 필요하다. //자바의 겟터 세터와 좀 다름.비교 필요
+
+//set을 통해 value값을 주고, 
+        };
+        const rec = new Rectangle(10, 20);  //rec이라는 변수를 선언
+        console.log(rec);
+        console.log(rec.height, rec.width);
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KepcoA</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <input type="checkbox"> <span>타이머 활성화</span>
+    <h1></h1>
+</body>
+
+<script>
+    let [timer, timerId] = [0,0];
+    const h1 = document.querySelector("h1");
+    const checkBox= document.querySelector("input");
+
+    checkBox.addEventListener("change",()=>{
+        timeId=setInterval(()=>{
+            timer+=1;
+            h1.textContent=`${timer}초`
+        },1000);
+    });
+</script>
+</html>

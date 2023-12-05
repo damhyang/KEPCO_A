@@ -1,0 +1,13 @@
+package com.example.mybatis.board.mapper;
+
+import java.util.*;
+
+import org.apache.ibatis.annotations.Mapper;
+
+//추상메소드의 종류는 2개임. 인터페이스(규약을 무조건 지킴)나 up스트레스?(규약 상속 포기)
+
+@Mapper
+public interface demoMapper {
+    public List<Map<String,Object>> select();
+}
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        const article = {
+            num: 1,
+              title: 'A',
+              reply: [
+                { num: 3, title: 'A-3' },
+                { num: 2, title: 'A-2' },
+                { num: 1, title: 'A-1' }   //objet객체가 한번 더 들어가 있음.
+              ]
+            };
+            
+        for(key in article){
+            console.log(article[key]);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

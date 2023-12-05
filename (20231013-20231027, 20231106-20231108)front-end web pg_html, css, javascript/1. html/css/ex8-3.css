@@ -1,0 +1,13 @@
+div{
+	float:left;
+}
+img{
+	width:310px;
+	height:300px;
+	margin: top 30px;
+}
+
+/* 클리어속성을 사용한 경우 */
+/* h3{
+	clear: left; 
+} */

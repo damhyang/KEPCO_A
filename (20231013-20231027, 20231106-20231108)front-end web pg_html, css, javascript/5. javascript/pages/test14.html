@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+                let food1 = parseInt(prompt('첫번째 음식의 금액을 입력해주세요.'));
+                let food2 = parseInt(prompt('두번째 음식의 금액을 입력해주세요.'));
+                let cnt = parseInt(prompt('나누어 낼 인원 수를 입력해주세요.'));
+                let result;
+                result=(food1+food2)/cnt
+                console.log(typeof food1)
+                console.log(typeof food2)
+                console.log(typeof cnt)
+                console.log(result);              
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+    </body>
+</html>

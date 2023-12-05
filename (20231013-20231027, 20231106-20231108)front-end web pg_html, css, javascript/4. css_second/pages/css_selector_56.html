@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Layout - flexbox 가변 배치 형태 display: flex</title>
+    <style>
+        .flex-item {
+            background-color: lightcyan;
+            border: 1px solid red;
+        }    
+        .flex-container {
+            display: flex;
+            background-color: lightgrey;
+        }
+        .row {
+            display: flex;
+            background-color: lightgrey;
+            flex-direction : row;
+        }   
+        .row-reverse {
+            display: flex;
+            background-color: lightgrey;
+            flex-direction : row-reverse;
+        }        
+        .column {
+            display: flex;
+            background-color: lightgrey;
+            flex-direction : column;
+        }    
+        .column-reverse {
+            display: flex;
+            background-color: lightgrey;
+            flex-direction : column-reverse;
+        }    
+    </style>
+</head>
+
+<body>
+
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+    <br><hr><br>
+    <div class="row">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+    <br><hr><br>
+    <div class="row-reverse">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+    <br><hr><br>
+    <div class="column">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+    <br><hr><br>
+    <div class="column-reverse">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,17 @@
+span{
+	border:solid 1px red;
+	color: red;
+	display:inline;
+}
+#span1{
+	display:inline;
+}
+#span2{
+	display:block;
+}
+#span3{
+	display:inline-block;
+}
+#span4{
+	display:none;
+}

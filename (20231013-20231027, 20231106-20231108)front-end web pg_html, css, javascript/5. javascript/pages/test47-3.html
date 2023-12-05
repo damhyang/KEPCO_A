@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+                let score=[
+                    {"name":"A", "score":77},
+                    {"name":"B", "score":88},
+                    {"name":"C", "score":66},
+                    {"name":"D", "score":55}
+                ];
+                function checkData(data){
+                    const result = [];
+                    const person = {};
+                    data.forEach(
+                        value=>{
+                            person["name"] =value.name;
+                            person["score"] =value.score;
+                            if(value.score>60){
+                                person["pass"]="pass";
+                            }else{
+                                person["pass"]="fail";
+                            }
+                            result.push(person);
+                        }
+
+                    )
+                    return result;
+                } 
+                rr=checkData(score);
+                console.log(rr);
+            }
+
+            <!-- 참조타입이기 때문에 D가 계속 남아서 계속 돌게 됨. -->
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+    </body>
+</html>
+
+<!-- /*if(value 1% 2 == 0){
+    total+=value;
+}else{
+    total=total;
+}
+if(value 2% 2 == 0){
+    total+=value;
+}else{
+    total=total;
+}*/ -->

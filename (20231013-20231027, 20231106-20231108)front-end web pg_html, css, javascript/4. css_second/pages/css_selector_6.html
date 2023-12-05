@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>속성선택자</title>
+    <style>
+        input[type=text] { width : 50px; }
+        input[type=password] { background-color : red; }
+        input[type=tel] { font-size : 30px; }
+        input[type=search] { font-style : italic; }
+        
+
+    </style>
+</head>
+<body>
+    <input type="text"><br>   
+    <input type="password"><br>
+    <input type="tel"><br> 
+    <input type="search"> <!-- 존재하지 않는 type이지만 기본이 text이기 때문에 저절로 text 속성이 생긴다. -->
+    
+</body>
+</html>

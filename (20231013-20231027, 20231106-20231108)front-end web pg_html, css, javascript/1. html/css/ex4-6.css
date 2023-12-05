@@ -1,0 +1,30 @@
+body{
+        font-family: "돋움"; 
+    }
+h3  {
+        /* font-family: "돋움";  body에 의해 종속되어 적용되므로 생략함.*/
+        font-size: 25px;
+    }
+p   {
+        /* font-family: "돋움"; body에 의해 종속되어 적용되므로 생략함. */
+        line-height: 180%;
+        /* line-height: 25px; */
+    }
+span{
+
+        /* font-style: oblique;  */
+        font-style: italic; 
+  	    font-weight: bold;
+        color:green;
+        background-color: yellow;
+    }
+
+
+
+    /* tree이론
+    젤 위 : 루트
+    각각을 node
+    연결마디를 edge
+    parent<->child
+    자식이 없으면 leaf
+    같은 노드의 자식은 형제라고 표현한다. */

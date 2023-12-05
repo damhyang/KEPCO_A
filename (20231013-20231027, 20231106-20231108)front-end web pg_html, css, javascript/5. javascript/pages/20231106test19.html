@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        const array = [9, 22, 29, 33, 37, 40];
+
+        let result = array.find((value, index, arr) => {   //find는 첫번쨰 요소만 반환
+            //console.log(value, index, arr);
+            return value % 3 == 0;
+        });
+
+        console.log(result);//find함수 적용
+
+        let result2 = array.filter((value, index, arr) => {   //find는 첫번쨰 요소만 반환
+            //console.log(value, index, arr);
+            return value % 3 == 0;
+        });
+
+        console.log(result2);  //filter함수 적용
+    </script>
+</body>
+</html>

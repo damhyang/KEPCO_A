@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        class Rectangle{
+//자바방식            Rectangle(width, height){
+//자바방식                this. width;
+//자바방식                this.height;
+//자바방식            }  //클래스명과 메소드의 명이 같으면 생성자오직한개뿐임. : constructor이다. 초기에 주고 싶은 조건. 주고 싶은 변수가 width, height이다.)
+            constructor(width, height){
+                this.height = height;   //this를 넣으므로 내 자신이 쓰는 것이 오른쪽인지 왼쪽인지 알려준다. (왼쪽)
+                this.width=width;
+            }   
+
+            Area(){
+                return this.height*this.width;
+            }
+        };
+        const rec = new Rectangle(10, 20);  //rec이라는 변수를 선언
+        console.log(rec.width);
+        console.log(rec.height);
+        console.log(rec);
+        console.log(rec.height, rec.width);
+
+    </script>
+</head>
+<body>
+</body>
+</html>

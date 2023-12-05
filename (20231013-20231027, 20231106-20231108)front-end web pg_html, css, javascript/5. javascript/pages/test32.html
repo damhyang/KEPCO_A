@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+                let score = 50;
+                let hasPortfolio = true;
+                let isPass = true;
+                if(score >= 60) {
+                  if(hasPortfolio === true || isPass === true) {
+                    console.log('채용');
+                  } else {
+                    console.log('탈락');
+                  }
+                } else {
+                  console.log('탈락');
+                }
+                
+            }
+
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+    </body>
+</html>

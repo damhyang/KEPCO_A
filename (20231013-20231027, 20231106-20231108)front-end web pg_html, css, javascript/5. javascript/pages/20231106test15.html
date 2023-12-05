@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        const animals = ['🐶', '🐱', '🐷'];
+        
+        for(i=0;i<animals.length;i++){
+            console.log(animals[i])
+        }
+
+        for(key in animals) {
+            console.log(key);
+        }
+            
+        for(value of animals) {
+            console.log(value);
+        }
+
+        animals.forEach(function(animal, index, array){
+              console.log(`${animal} | ${index} | ${array}`);
+            });
+
+        animals.forEach((animal, index, array) => {
+                console.log(`${animal} | ${index} | ${array}`);
+            });
+                
+            
+    </script>
+</body>
+</html>

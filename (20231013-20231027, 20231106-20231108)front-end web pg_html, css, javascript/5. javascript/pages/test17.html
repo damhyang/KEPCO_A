@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+                let counter = 2;
+                console.log(counter);
+                const preIncrement = ++counter;
+                console.log(preIncrement);
+                console.log(counter);
+                const postIncrement = counter++;
+                console.log(postIncrement);
+                console.log(counter);
+                console.log(`counter: ${counter}, preIncrement: ${preIncrement}, postIncrement: ${postIncrement}`);
+
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>상대 길이 단위</title>
+    <style>
+        html{font-size: 16px;}
+        .em li{font-size: 1.3em; color:red}
+        .rem li{font-size: 1.3rem; color:blue}            
+    </style>
+
+</head>
+<body>
+    <h3>em단위(상대적단위)</h3>
+    <ul class="em">
+        <li>One</li>
+        <li>Two
+            <ul>
+                <li>Two A</li>
+                <li>Two B
+                    <ul>
+                        <li>Two B 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <hr>
+    <h3>rem단위(부모의 크기를 그대로 받음)</h3>
+    <ul class="rem">
+        <li>One</li>
+        <li>Two
+            <ul>
+                <li>Two A</li>
+                <li>Two B
+                    <ul>
+                        <li>Two B 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+        
+</body>
+</html>
+

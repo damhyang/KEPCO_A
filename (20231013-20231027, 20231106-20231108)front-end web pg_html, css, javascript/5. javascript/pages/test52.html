@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+                const callback = function(){
+                    const figure= document.querySelector(".figure");
+                    console.log(figure);
+                    figure.style.backgroundColor = "red";
+                    figure.style.borderRadius = "500px";
+
+                    /*<!-- const label1= document.getElementsByClassName("label")[0];
+                    console.log(label1); -->*/
+                    
+                    const label= document.querySelector(".label");
+                    /*<!-- label.innerTEXT = "<h2>모습변경<h2>"; -->*/
+                    label.innerHTML = "<h2>모습변경<h2>";
+
+                }
+                setTimeout(callback, 2000);
+                
+            }
+        </script>
+
+        <style>
+            .figure{
+                background-color: green;
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+        <div>
+            <div class='label'></div>
+            <div class='figure'></div>
+        </div>
+
+    </body>
+</html>

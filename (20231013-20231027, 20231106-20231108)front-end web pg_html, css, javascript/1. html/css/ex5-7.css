@@ -1,0 +1,15 @@
+*{
+    margin:0px;
+}
+h3{
+    margin:20px;
+}
+p{
+    border:solid 1px black;
+    margin-right:20px;
+    margin-left:20px;
+    border-radius:20px;
+    padding:20px;
+}
+
+/* 픽셀이 클수록 둥글어짐. */

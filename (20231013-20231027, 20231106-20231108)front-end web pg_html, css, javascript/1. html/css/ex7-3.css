@@ -1,0 +1,22 @@
+table{
+	border-collapse:collapse;
+	text-align:center;
+	width:600px;
+	font-size:12px;
+	border-top:solid 2px orange;
+	line-height:180%;
+}
+th{
+	background-color:#eeeeee;
+	line-height:200%;
+}
+tr, th, td{
+	border:solid 1px #888888;
+	/* border-top:solid 2px orange; */
+}
+#col1, #col2, #col3{
+	width:20%;	
+}
+#col4{
+	width:40%;
+}

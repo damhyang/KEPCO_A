@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+
+                function print1(){
+                    console.log("print1");
+                }
+                print1();
+                
+                const print2=function(){
+                    console.log("print2");
+                }
+                print2();
+
+                const print3 =function print3(){
+                    console.log("print3");
+                }
+                print2();
+
+                const print4 = print3()
+                print4();
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+    </body>
+</html>

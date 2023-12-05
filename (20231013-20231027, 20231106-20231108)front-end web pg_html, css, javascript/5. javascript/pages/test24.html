@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+                var num=12345
+                tmpNumber1=num-(num%10000);
+                num1 = tmpNumber1/10000;
+                var num=num-(num1*10000);
+                tmpNumber2=num-(num%1000);
+                num2 = tmpNumber2/1000;
+                var num=num-(num2*1000);
+                tmpNumber3=num-(num%100);
+                num3 = tmpNumber3/100;
+                var num=num-(num3*100);
+                tmpNumber4=num-(num%10);
+                num4 = tmpNumber4/10;
+                num5=num-(num4*10);
+
+                console.log(tmpNumber1);
+                console.log(num1);
+                console.log(tmpNumber2);
+                console.log(num2);
+                console.log(tmpNumber3);
+                console.log(num3);
+                console.log(tmpNumber4);
+                console.log(num4);
+                console.log(num5);
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+    </body>
+</html>

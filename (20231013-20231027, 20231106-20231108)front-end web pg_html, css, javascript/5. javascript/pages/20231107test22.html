@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KepcoA</title>
+    <script>
+        const obj = document.createElement("h1");
+        obj.textContent = "header";
+        console.log(obj);
+        //document.body.appendChild(obj);  //body가 없어 안됨.
+        document.addEventListener("DOMContentLoaded",()=>
+        document.body.appendChild(obj));  //appendChild로는 웹에서 소스보기를 하면 body에 표시가 되지 않는다. 이때 셀레늄으로 찾는다. 그리고 이것은 숨길 때도 사용한다. 
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

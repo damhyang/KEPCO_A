@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://unpkg.com/axios@1.6.0/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script>
+        ajax = axios({
+          url:"http://ggoreb.com/dinosaur/info.jsp",
+          method:"get",
+          params:{},
+      });
+      ajax.then(res => {
+          let code = '<div class="dropdown">';
+          for(  item of res.data) {
+            code += `<button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                ${item.kind} (${item['dinosaurs'].length})
+              </button>`;
+            code += `<ul class="dropdown-menu">`;
+            for(  dinosaur of item['dinosaurs']) {
+              code += `<li><a class="dropdown-item" href="#">${dinosaur.title}</a></li>`;
+            }
+            code += `</ul></div>`;
+          }
+          document.querySelector('#content').innerHTML = code;
+          console.log(code);
+        });
+        
+  </script>
+
+</head>
+<body>
+  <div id="content"></div>
+    
+</body>
+</html>

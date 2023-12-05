@@ -1,0 +1,38 @@
+03장 if문  - 프로그램의 구조 (if / while, for)
+
+비교 연산자                   논리 연산자
+>			x or y      (조건) or (조건)
+<			x and y     (조건) and (조건)
+==			not x       not (조건)
+!=
+>=
+<=
+
+in / not in
+
+a = 8; b = 5
+
+if a == 8 and b == 4:
+if( (a == 8)or(b == 4) ):
+if (ax+by+cz >= 40000) :
+
+if [- else]                                    else(x)
+if - elif - .... [- else]                      elif(x)
+
+
+08.28       print함수를 사용해보자 (%d, %f, %s - 포멧코드 사용법 / f-string사용법)
+                   print함수를 이용해서 True 또는 False를 출력할수 있는 비교연산자(비교연산자+논리연산자)
+
+print(3>5)
+False
+
+print("%d"%(3>5))
+0
+
+print(f"{3>5}")
+False
+
+Bool= 3 in [2,4,6]
+
+print(f"{Bool}")
+False

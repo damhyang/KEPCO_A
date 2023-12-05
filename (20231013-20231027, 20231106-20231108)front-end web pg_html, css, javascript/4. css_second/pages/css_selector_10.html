@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>하위(자손)선택자와 자식 선택자</title>
+    <style>
+        body{width:250px;}
+        body>div{font-size:2rem;}
+        ul>li{background-color: khaki;}
+        li{background-color: khaki;}
+        li>div{border: solid 3px coral;}
+        li>ul>li{font-style: italic; text-decoration: line-through; list-style: none;}
+    </style>
+</head>
+<body>
+    <div>하위 / 자식 선택자</div>
+    <ul>
+        <li>
+            <div>Item 1</div>
+            <ul>
+                <li>Subitem A</li>
+                <li>Subitem B</li>
+            </ul>
+        </li>
+        <li>
+            <div>Item 2</div>
+            <ul>
+                <li>Subitem A</li>
+                <li>Subitem B</li>
+            </ul>
+        </li>
+    </ul>
+    
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+<!-- //자바스크립트의 캔버스 객체를 이용하면 애니메이션이 더 좋다. 그러나 일단 이벤트 연습하자. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KepcoA</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <select>
+        <option>떡볶이</option>
+        <option>순대</option>
+        <option>오뎅</option>
+        <option>튀김</option>
+    </select>
+    <p></p>
+</body>
+
+<script>
+    const select=document.querySelector("select");
+
+    select.addEventListener("change",(event)=>{
+        //라디오박스, 셀렉트, 체크박스는 change이벤트이다.
+        //console.log(select.options);
+        const options=select.options;
+        const index=options.selectedIndex;
+        //console.log(index);
+        //console.log(options[index]);  //내용뿐만아니라 태그까지 함께 가져옴.
+        //console.log(options[index].textContent);//내용만
+        document.querySelector("p").textContent="선택 : " + options[index].textContent;
+    });
+</script>
+</html>

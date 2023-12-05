@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+                const quize = function(answer){
+                    if(answer === 'love you') {
+                        console.log("'love you");
+                    }else{
+                        console.log("'NO");
+                    }
+                }
+                let answer= prompt(`나를 사랑하십니까?`);
+                quize(answer);
+            }
+
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!-- //자바스크립트의 캔버스 객체를 이용하면 애니메이션이 더 좋다. 그러나 일단 이벤트 연습하자. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KepcoA</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        table {
+            width: 50vw; height: 50vh;
+            border-spacing: 0;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        td { border: 1px solid black; }
+        tr:first-child td { border-top: 3px solid black; }
+        tr:last-child td { border-bottom: 3px solid black; }
+        td:first-child { border-left: 3px solid black; }
+        td:last-child { border-right: 3px solid black; }
+    </style>
+        
+</head>
+<body>
+    <div id='bingo'></div>
+</body>
+
+<script>
+    const size =3;
+    const number=new Array(); //객체만들기
+    for(let i=1; i<=size*size;i++){
+        number.push(i);
+    }
+    number.sort(()=>Math.random()-0.5);
+    const table=document.createElement("table");
+    let tr;
+    for(let i=0; i<number.length;i++){
+        if(i%3==0){
+            tr=document.createElement('tr');
+        }
+        num=number[i];
+        const td = document.createElement('td');
+        const val=document.createTextNode(num);
+        tr.appendChild(td)
+        td.appendChild(val);
+        table.appendChild(tr);
+    }
+    //console.log(number);
+    //console.log(document.createTextNode(1));
+    //console.log(document.createTextNode(number[0]));
+
+    document.querySelector("#bingo").appendChild(table);
+
+    //elem=document.querySelector("td");
+    //console.log(elem);
+    elem=document.querySelectorAll("td");
+    //console.log(elem);
+
+    //elem[0].addEventListener("click",()=>elem[0].style.backgroundColor="lightgray");
+
+    elem.forEach(e=>e.addEventListener("click",()=>{
+        e.style.backgroundColor="lightgray"
+    }));
+</script>
+</html>

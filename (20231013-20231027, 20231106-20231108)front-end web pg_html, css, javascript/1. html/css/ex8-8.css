@@ -1,0 +1,13 @@
+div{
+    font-size: 17px;
+    font-weight: 100rem;
+    text-align:center;
+    height: 100px;
+    width: 100px;
+}
+
+b{
+    position:absolute;
+    left:60px;
+    top:30px;
+}

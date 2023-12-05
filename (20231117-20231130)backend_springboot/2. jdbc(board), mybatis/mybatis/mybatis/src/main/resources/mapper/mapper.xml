@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<!-- <mappers>
+    <mapper namespace="com.example.mybatis.mapper.DemoMapper">
+        <select id="select" resultType="java.util.Map">
+            select * from demo;
+        </select>
+        <select id="selectById" resultType="java.util.Map">
+            select * from demo where seq = ${seq};
+        </select>
+        <insert id="insert">
+            insert into demo(seq,USER) values(#{seq}, #{user});
+        </insert>
+        <update id="update">
+            update demo set user=(#{user}) where seq=(#{seq});
+        </update>
+        <delete id="delete">
+            delete from demo where seq = ${seq};
+        </delete>
+    </mapper> -->
+
+<mapper namespace="com.example.mybatis.mapper.BoardDao">
+    <select id="selectList" resultType="java.util.Map">
+        select * from board; 
+    </select>
+    <select id="selectDetail" resultType="java.util.Map">
+        select title
+               ,content
+               ,writer
+               ,search_count 
+               ,write_date
+            from board 
+        where seq=#{seq}; 
+    </select>
+    <insert id="insertBoard">
+        insert board(title,content,writer,write_date) 
+        values (#{title}, #{content}, #{writer},#{writeDate});
+    </insert>
+    <update id="updateBoard">
+        update board set title=#{title},content=#{content},write_date=#{writeDate} where seq=#{seq};
+    </update>
+
+</mapper>
+<!-- </mappers> -->
+

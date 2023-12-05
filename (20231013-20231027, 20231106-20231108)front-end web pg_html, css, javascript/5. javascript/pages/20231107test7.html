@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://unpkg.com/axios@1.6.0/dist/axios.min.js"></script>
+
+    <script>
+      const ajax = axios({
+          url:"http://ggoreb.com/api/toc.jsp",
+          method:"get",
+          params:{},
+      });
+      axios.then(result=>{
+          let code='<ul class="list-group">';
+            for(const i in result.data){
+            code+=`<li class="list-group-item d-flex justify-content-between align-items-center"
+              title="${i.desc}">${i.title}
+              <span class="badge bg-primary rounded-fill">${i.id}</span></li>`;
+            };
+            code += "</ul>"
+      });
+      console.log(code);
+  </script>
+
+</head>
+<body>
+
+    
+</body>
+</html>

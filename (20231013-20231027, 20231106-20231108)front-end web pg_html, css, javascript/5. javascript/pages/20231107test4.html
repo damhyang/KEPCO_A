@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+
+    <div class="content"></div>
+
+    <script>
+          const xhr = new XMLHttpRequest();
+          xhr.onreadystatechange = callback;
+          xhr.open('post', 'http://ggoreb.com/ajax/html/data2.jsp');
+          //비동기화방식으로 하려면 request header
+
+          xhr.setRequestHeader('key', 'value');
+          const formData = new FormData();
+          formData.append('key', 'value');
+          xhr.send(formData);
+
+          function callback() {
+            if (xhr.readyState == 4) {
+              if (xhr.status == 200) {
+                let result = xhr.response;
+                console.log(result);
+                //document.getElementById("content").innerHTML+=result;  //html페이지를 document라고 함.
+                document.querySelector(".content").innerHTML += result;
+              }
+            }
+          }
+        </script>
+        
+</body>
+</html>

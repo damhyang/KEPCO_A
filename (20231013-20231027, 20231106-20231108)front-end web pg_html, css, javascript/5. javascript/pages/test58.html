@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+                function sequence() {
+                    let seq = 0;
+                    return function () {
+                        seq++;
+                        return seq;
+                    };
+                }
+                const check = sequence();
+                window.addEventListener("blur", () => {
+                    const count = check();
+                    if(count > 5) {
+                        window.close();
+                    }
+                });  
+                const count = check();
+                console.log(count);
+            }
+        </script>
+    </head>
+
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+    </body>
+</html>

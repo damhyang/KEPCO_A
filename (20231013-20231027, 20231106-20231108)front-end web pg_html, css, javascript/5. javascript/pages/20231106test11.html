@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        const house = {
+          bathroom: 1,
+          room: 2,
+          address: ['제주도', '제주시', '연동'],
+          persons: [
+              { name: 'kim' },
+              { name: 'lee' }
+          ]
+        };
+        
+
+      for(key in house){
+        console.log(`${key} ${house[key]}`);
+      }
+
+      delete house.bathroom;
+      house.animal = ['dog','cat']
+
+      for(key in house){
+        console.log(`${key} ${house[key]}`);
+      }
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

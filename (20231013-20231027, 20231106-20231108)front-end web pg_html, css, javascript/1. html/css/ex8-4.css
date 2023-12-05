@@ -1,0 +1,35 @@
+#wrapper{
+	width:800px;
+	margin: 0 auto;
+}
+#header, #sidebar, #section, #footer{
+	font-size:20px;
+	text-align:center;
+	padding: top 30px;
+}
+#header{
+	height: 60px;
+    background-color: #dddddd;
+}
+#sidebar{
+	width:200px;
+	height:300px;
+	background-color:orange;
+	float:left;
+}
+#section{
+	width:600px;
+	height:300px;
+	background-color:skyblue;
+	float:right;
+}
+#footer{
+	height: 60px;
+    background-color: #dddddd;
+	clear:both;
+}
+
+/* float는 떼어내는 것이기 때문에 #wrapper를 벗어난다.
+요즘은 flex를 쓰게 된다*/
+
+/* border가 있으면 다 떨어지게 된다 그래서 border지움 */

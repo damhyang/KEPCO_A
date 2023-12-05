@@ -1,0 +1,33 @@
+<!-- //자바스크립트의 캔버스 객체를 이용하면 애니메이션이 더 좋다. 그러나 일단 이벤트 연습하자. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KepcoA</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <input type="text"> inch
+    <button>계산</button>
+    <p></p>
+
+</body>
+
+<script>
+    const btn = document.querySelector("button");
+
+    //console.log(btn);
+
+    btn.addEventListener("click",()=>{
+        const val = document.querySelector("input").value;
+        const result=val*2.54;
+        const obj=document.querySelector("p");
+        obj.textContent=`${result} cm`
+    })
+
+
+</script>
+</html>

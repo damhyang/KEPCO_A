@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title></title>
+    <style>
+        div { width: 100px; height: 100px; position: absolute; }
+        #top1 { 
+            background-color: rgb(255, 0, 0); 
+        }
+        #center1 {
+            background-color: rgb(0, 128, 0); top: 50px; left: 50px;
+        }
+        #bottom1 {
+            background-color: rgb(0, 0, 255); top: 100px; left: 100px;
+
+        }
+        #top { 
+            background-color: rgb(255, 0, 0); top: 250px; 
+            z-index: 3; 
+        }
+        #center {
+            background-color: rgb(0, 128, 0); top: 300px; left: 50px;
+            z-index: 2;
+        }
+        #bottom {
+            background-color: rgb(0, 0, 255); top: 350px; left: 100px;
+            z-index: 1;
+        }
+            
+    </style>
+</head>
+
+<body>
+    <div id="top1">toptop</div>
+    <div id="center1">centercenter</div>
+    <div id="bottom1">bottombottom</div>
+    <br><br><br><br><br><br><br><br><br><br><hr><br>
+    <div id="top">toptop</div>
+    <div id="center">centercenter</div>
+    <div id="bottom">bottombottom</div>
+
+  
+</body>
+</html>
+

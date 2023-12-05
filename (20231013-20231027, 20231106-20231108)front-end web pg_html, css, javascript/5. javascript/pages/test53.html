@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+                const callback= function(position){
+                    const lat = position.coords.latitude;
+                    const lng = position.coords.longitude;
+                    console.log(lat);
+                    console.log(lng);
+                }
+                window.navigator.geolocation.getCurrentPosition(callback);
+                
+            }
+        </script>
+    </head>
+
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+    </body>
+</html>

@@ -1,0 +1,49 @@
+숫자형(number)
+ - 정수형(int)                                     >>> int("123")  / int("abc") (X)
+ - 실수형(float)   컴퓨터식 지수 표현방식(e3 / E4)     >>> float("1.23")
+
+(2진수) / 8진수 / 16진수     < >    10진수(0~9)   hex(10)
+
+                               몫  나머지
+연산자 ( +, -, *, / [ //,  %  ] )
+--------------------------------------------------
+
+문자열(string)
+ ### 문자(char) - 아스키코드표(외우실 분들만!!!)
+ - 문자열(str)  "123"   >>> input함수
+    이스케이프코드(개행문자) : \n, \t
+    포맷 코드 (일체)
+
+
+연산자 ( +, * )        '1' + '1' = '11'
+                  '1' *  2  = '1' + '1' = '11'
+len() : 문자열의 길
+인덱싱, 슬라이싱         문자열[(시작):(끝):-1]
+>> p61 문자열 나누기
+       문자열 또는 변수 [ : ] >>변수part
+--------------------------------------------
+포매팅 p64   %s  %d  %f   %c
+
+"I eat %d apples." % int 자료형      << c, cpp
+
+     %.4f float자료형 출력시 
+
+     "I eat {0} apples, {1} oranges.".format(3, 4)
+     "I eat {app} apples, {ora} oranges.".format(app=3, ora=4)
+     "I eat {app} apples, {1} oranges.".format(app=3, 4)
+
+f-string 3.6부터가능
+f"I eat {apple} apples, {orange} oranges"
+
+count   문자 개수 세기         "hobby".count('b')
+find/index                 "hobby".find('b'[, idx])  >> 숙제(8.24)  "hobby".find('b')+("by".find('b')+1)
+                           "hobby".index('z')
+
+join(삽입)  split(나누기)
+
+upper / lower       대 / 소문자로 변환
+
+strip (양쪽 공백을 지운다)
+replace (문자열 치환)
+
+

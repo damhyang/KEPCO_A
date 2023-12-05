@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>ex7-3</title>
+    <link rel="stylesheet" href="../css/ex7-3.css" type="text/css">
+</head>
+<body>
+    <a href="../index_css.html">목록보기</a>
+    <h3>놀이공원 이용권</h3>
+    <table>
+        <tr>
+            <th id="col1">종류</th>
+            <th id="col2">대인</th>
+            <th id="col3">소인</th>
+            <th id="col4">비고</th>
+        </tr>
+        <tr>
+            <td>주간권</td>
+            <td>20,000원</td>
+            <td>10,000원</td>
+            <td rowspan="3">공원 입장 및 놀이시설 이용<Br>(일부 놀이기구 별도 요금)</td>
+        </tr>
+        <tr>
+            <td>야간권</td>
+            <td>15,000원</td>
+            <td>8,000원</td>
+        </tr>
+        <tr>
+            <td>2일권</td>
+            <td>30,000원</td>
+            <td>15,000원</td>
+        </tr>
+    
+    </table>
+
+
+
+    <br><br><br><br>
+    <hr>
+    <table>
+        <tr>
+            <td>
+                table{
+                    border-collapse:collapse;
+                    text-align:center;
+                    width:600px;
+                    font-size:12px;
+                    border-top:solid 2px orange;
+                    line-height:180%;
+                }
+                <br>
+                th{
+                    background-color:#eeeeee;
+                    line-height:200%;
+                }
+                <br>
+                tr, th, td{
+                    border:solid 1px #888888;
+                    /* border-top:solid 2px orange; */
+                }
+                <br>
+                #col1, #col2, #col3{
+                    width:20%;	
+                }
+                <br>
+                #col4{
+                    width:40%;
+                }    
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

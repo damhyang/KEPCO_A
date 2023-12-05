@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+                let lotto=[1,8,16]
+                isCorrect=true;
+                let count=0;
+                while(isCorrect){
+                    let myLotto=[];
+                    while(myLotto.length<3){
+                        var num=parseInt(Math.random()*45)+1;
+                        if(myLotto.indexOf(num)==-1){
+                            myLotto.push(num)
+                        }
+                    }
+                    myLotto.sort((a, b) => a - b);
+                    if(myLotto[0]==lotto[0]){
+                        if(myLotto[1]==lotto[1]){
+                            if(myLotto[2]==lotto[2]){
+                                console.log(`${count}번째에 맞췄습니다. ${myLotto}`);
+                                isCorrect=false;
+                            }
+                        }
+                    }
+                    count++;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+    </body>
+</html>
+
+<!-- /*if(value 1% 2 == 0){
+    total+=value;
+}else{
+    total=total;
+}
+if(value 2% 2 == 0){
+    total+=value;
+}else{
+    total=total;
+}*/ -->

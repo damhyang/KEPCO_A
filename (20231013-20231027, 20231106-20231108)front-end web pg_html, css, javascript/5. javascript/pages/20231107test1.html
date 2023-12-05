@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.onreadystatechange=callback;
+        xhr.open("get","http://ggoreb.com/ajax/html/data1.jsp"); //html page에서 <form><input>value </input></form>와 유사
+        xhr.send(null);
+
+        function callback(){
+            if(xhr.readyState==4){
+                if(xhr.readyState==200){
+                    let result = xhr.response;
+                    console.log(result);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

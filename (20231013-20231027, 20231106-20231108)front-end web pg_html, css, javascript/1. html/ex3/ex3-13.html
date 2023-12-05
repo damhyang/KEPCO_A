@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex3-13</title>
+</head>
+<body>
+    <a href="../index.html">목록보기</a>
+    <h3>테이블 행과 열의 병합</h3>
+    <table border="1">
+        <tr>
+            <td style="text-align:center; background-color:antiquewhite">병합전</td>
+            <td style="text-align:center; background-color:antiquewhite">병합후</td>
+        </tr>
+        <tr>
+            <td>
+                <table border="1">
+                    <!-- <tr>
+                        <th colspan="4">병합전</th>
+                    </tr> -->
+                    <tr>
+                        <th>도</th>
+                        <th>시</th>
+                        <th colspan="2">최저/최고기온</th>
+                    </tr>
+                    <tr>
+                        <td>경기도</td>
+                        <td>수원</td>
+                        <td>20</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>경기도</td>
+                        <td>인천</td>
+                        <td>20</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>강원도</td>
+                        <td>강릉</td>
+                        <td>20</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>강원도</td>
+                        <td>원주</td>
+                        <td>20</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>전라도</td>
+                        <td>광주</td>
+                        <td>20</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>전라도</td>
+                        <td>전주</td>
+                        <td>20</td>
+                        <td>30</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table border="1">
+                    <!-- <tr>
+                        <th colspan="4">병합후</th>
+                    </tr> -->
+                    <tr>
+                        <th>도</th>
+                        <th>시</th>
+                        <th colspan="2">최저/최고기온</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">경기도</td>
+                        <td>수원</td>
+                        <td>20</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>인천</td>
+                        <td>20</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">강원도</td>
+                        <td>강릉</td>
+                        <td>20</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>원주</td>
+                        <td>20</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">전라도</td>
+                        <td>광주</td>
+                        <td>20</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>전주</td>
+                        <td>20</td>
+                        <td>30</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

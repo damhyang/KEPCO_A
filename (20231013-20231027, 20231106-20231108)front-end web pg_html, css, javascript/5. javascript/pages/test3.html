@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input id="first" type="text">&nbsp;
+        <input id="second" type="text">
+        <p id="demo">결과는 : </p>  
+        <button type="button" onClick="change()">보여줘</button> 
+        <script>
+            function change(){
+                var result = document.getElementById("demo");
+                var first_val = document.getElementById("first").value;
+                var second_val = document.getElementById("second").value;
+                var result_val = first_val + second_val;
+                result.innerHTML = result_val
+                
+                console.log(a);
+                a.innerHTML="f12(개발자도구) 브라우저콘솔창에 입력하고 HTML에 띄우기";
+            }     /*함수 선언*/                                
+        </script>
+    </body>
+</html>

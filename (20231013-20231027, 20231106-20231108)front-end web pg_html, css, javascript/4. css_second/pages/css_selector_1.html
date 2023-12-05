@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a, b, c{
+            border:solid 1px black;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        a{
+            background-color: green;
+        }
+        .a{
+            background-color: green;
+        }
+        #a{
+            background-color: red;
+        }
+        [for]{
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a class="a" id="a">A</a>
+        <b class="a">B</b>
+        <c for="a">C</c>
+    </div>
+</body>
+</html>

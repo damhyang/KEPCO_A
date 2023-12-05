@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+                const printYes = function (){
+                    console.log("yes");
+                }
+
+                const printNo = function (){
+                    console.log("no");
+                }
+
+                const quize = function(answer){
+                    if(answer === 'love you') {
+                        printYes();
+                    }else{
+                        printNo();
+                    }
+                }
+
+                let answer= prompt(`나를 사랑하십니까?`);
+                quize(answer);
+            }
+
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <input id="first" type="text">&nbsp;
+        <input id="second" type="text">
+        <p id="demo">결과는 : </p>  
+        <button type="button" onClick="change()">보여줘</button> 
+        <script>
+            function change(){
+                var result = document.getElementById("demo");
+                var first_val = document.getElementById("first").value;
+                var first_val = parseInt(first_val);
+                var second_val = document.getElementById("second").value;
+                var second_val = parseInt(second_val);
+                var result_val = first_val + second_val;
+                consol.log(result);
+                result.innerHTML = result_val
+
+            }                              
+        </script>
+    </body>
+</html>

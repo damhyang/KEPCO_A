@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+                let box=[];
+                while(box.length<3){
+                    var num=parseInt(Math.random()*45)+1;
+                    if(box.indexOf(num)==-1){
+                        box.push(num)
+                    }
+                }
+                console.log(box);
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+    </body>
+</html>
+
+<!-- /*if(value 1% 2 == 0){
+    total+=value;
+}else{
+    total=total;
+}
+if(value 2% 2 == 0){
+    total+=value;
+}else{
+    total=total;
+}*/ -->

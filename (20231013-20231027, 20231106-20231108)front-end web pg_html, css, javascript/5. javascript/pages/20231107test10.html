@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <script src="https://unpkg.com/axios@1.6.0/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script>
+      const ajax = axios({
+          url:"http://ggoreb.com/api/toc.jsp",
+          method:"get",
+          params:{},
+      });
+      ajax.then(result=>{
+          let code='<ul class="list-group">';
+            for(const item of result.data){
+            code+=`<li class="list-group-item d-flex justify-content-between align-items-center"
+              title="${item.desc}">${item.title}
+              <span class="badge bg-primary rounded-fill">${item.id}</span></li>`;
+            };
+            code += "</ul>"
+            //console.log(code);
+            document.querySelector("#toc").innerHTML+=code;
+      });
+      
+  </script>
+
+</head>
+<body>
+  <div id="toc"></div>
+    
+</body>
+</html>

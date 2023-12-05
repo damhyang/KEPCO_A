@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        const array = [10, 23, 29, 33, 37, 40];
+
+    let result = array.some((value, index, array) => {
+        return value > 20;
+    });
+
+console.log(result);
+
+
+    let result2 = array.every((value, index, array) => {
+        return value > 20;
+    });
+    console.log(result2);
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute1(){
+                var number = 10;
+                console.log(`1 number: ${number}`);
+                {
+                    var number = 100;
+                    console.log(`2 number: ${number}`);
+                }
+                console.log(`3 number: ${number}`);
+            }
+            function excute2(){
+                var number = 10;
+                console.log(`1 number: ${number}`);
+                {
+                    let number = 100;
+                    console.log(`2 number: ${number}`);
+                }
+                console.log(`3 number: ${number}`);
+            }             
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="excute1()">변경전 실행</button> 
+        <button type="button" onClick="excute2()">변경후 실행</button> 
+    </body>
+</html>

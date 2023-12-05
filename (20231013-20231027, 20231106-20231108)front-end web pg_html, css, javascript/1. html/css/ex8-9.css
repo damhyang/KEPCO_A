@@ -1,0 +1,15 @@
+#box{
+    width: 10px;
+    height:600px;
+    background-color:green;
+}
+#a {
+	position: fixed;
+	top: 20px;
+	right:20px; 
+	background-color: red;
+	padding: 10px 20px;
+	color: white;
+}
+
+fixed는 body기준이지만, absolute와 달리 화면 원점(부모요소의 원점)을 기준으로 하여 움직임.

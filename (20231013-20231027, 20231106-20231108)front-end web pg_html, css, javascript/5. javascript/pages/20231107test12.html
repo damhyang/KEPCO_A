@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        //function showApple(){
+        //    resolve("🍎");
+        //}
+
+        //function getApple(){
+        //    return new Promise(resolve=>{
+        //        setTimeout(showApple,1000);
+        //    }) 
+        //}
+
+        function getApple(){
+            return new Promise(resolve=>{
+                setTimeout(resolve("🍎"),1000);
+            }) 
+        }
+
+        function sellApple(){
+            return new Promise(resolve=>{
+                getApple().then(x=>resolve(x))
+            }
+        )}
+
+        sellApple().then(result=>console.log(result));
+        console.log(sellApple());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,235 @@
+html, body{
+    margin:0 auto;
+    width: 100vh;
+    height: 100vh;
+    background:#93a9d1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#box_initial_introduce {
+    margin-top: 5vh;
+    margin-bottom: 1vh;
+    width: 50vh;
+    height: 15vh;
+    font-size:5.5vh;
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+#box_initial_message{
+    margin:0 auto;
+    width: 50vh;
+    height: 4vh;
+    font-size: 2vh;
+    color: whitesmoke;
+    font-style: italic;
+}
+
+#box_initial_loginsignup {
+    width: 50vh;
+    height: 70vh;
+	background: linear-gradient(90deg, #93a9d1,#F7CAC9);
+	background-size: 400% 400%;
+	animation: gradient 7s ease infinite;
+    border-radius: 2vh;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.mb-0{
+    height: 4vh;
+    width: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: whitesmoke;
+    font-size: 2.5vh;
+}
+
+.message{
+    height: 3vh;
+    width: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: whitesmoke;
+    font-size: 2vh;
+}
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked){
+    position: absolute;
+    left: -9999px;
+}
+.checkbox:checked + label,
+.checkbox:not(:checked) + label{
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 8vh;
+    height: 2.1vh;
+    border-radius: 2vh;
+    padding: 0;
+    margin: 0 auto;
+    cursor: pointer;
+    background-color: #ffeba7;
+}
+.checkbox:checked + label:before,
+.checkbox:not(:checked) + label:before{
+    position: absolute;
+    display: block;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 4vh;
+    color: #ffeba7;
+    background-color: #102770;
+    content: '←';
+    z-index: 20;
+    top: -1vh;
+    left: -1vh;
+    line-height: 5vh;
+    text-align: center;
+    font-size: 3vh;
+    transition: all 1s ease;
+}
+  .checkbox:checked + label:before {
+    transform: translateX(5vh) rotate(-180deg);
+}
+  
+.card-3d-wrap {
+    width: 50vh;
+    height: 55vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    perspective: 50vh;
+    margin-top: 3vh;
+}
+.card-3d-wrapper {
+    width: 50vh;
+    height: 55vh;   
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 600ms ease-out; 
+}
+.card-front, .card-back {
+    width: 46vh;
+    height: 55vh;
+    background-color: rgb(245, 245, 245);
+    position: absolute;
+    border-radius: 5vh;
+    left: 2vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.card-back {
+    transform: rotateY(180deg);
+}
+.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
+    transform: rotateY(180deg);
+}
+.center-wrap{
+    margin:0;
+    position: relative;
+    width: 40vh;
+    height: 50vh;
+    margin-left: 5vh;
+    top: 30vh;
+    left: 0;
+    transform: translate3d(0, -50%, 35px) perspective(100px);
+    z-index: 20;
+    display: block;
+}
+
+.mb-4 {
+    width: 50vh;
+    height: 6vh;
+    font-size:4vh;
+    font-weight: 600;
+    color: #F7CAC9;
+}
+input {
+    margin-top: 2vh;
+    height: 5vh;
+    width: 36vh;
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    outline: none;
+    color: #F7CAC9;
+    background-color: #93a9d1;
+    border: none;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+    box-shadow: 0 4px 8px 0 rgba(16, 16, 16, 0.2);
+}
+input:focus,
+input:active {
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.765);
+}
+
+button{
+    margin-top: 5vh;
+    height: 5vh;
+    width: 36vh;
+}
+
+.w-btn {
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.w-btn-indigo {
+    background-color: aliceblue;
+    color: #1e6b7b;
+}
+
+
+.w-btn:hover {
+
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.w-btn-outline:hover {
+
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.w-btn:active {
+    transform: scale(1.1);
+}
+
+
+
+

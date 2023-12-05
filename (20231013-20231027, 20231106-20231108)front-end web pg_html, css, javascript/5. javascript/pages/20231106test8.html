@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        const obj = { 
+            name: "Mike", 
+            age: 20 
+        };
+        
+        console.log(obj.name);
+        console.log(obj['name']); 
+        obj.hasJob = false;
+        obj['hasJob'] = true;
+        console.log(obj.hasJob);
+
+        delete obj.hasJob;
+        console.log(obj.hasJob);
+
+    </script>
+</head>
+<body>
+</body>
+</html>

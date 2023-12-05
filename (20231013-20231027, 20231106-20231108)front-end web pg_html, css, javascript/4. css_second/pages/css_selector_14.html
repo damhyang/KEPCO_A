@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>가상클래스 선택자(input:checked)</title>
+    <style>
+        input + span { display: none;}
+        input +span + span{display: inline-block; color:red;}
+        input:checked +span + span{display:none;}
+        input:checked + span { display: inline-block; color:green;}
+
+    </style>
+
+</head>
+<body>
+    <input type="checkbox">
+    <span>선택O</span>
+    <span>선택X</span>
+    <hr>
+    <input type="checkbox">
+    <span>선택O</span>
+    <span>선택X</span>
+
+
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function delay(ms){
+            return new promise(resolve=>
+            setTimeout(resolve, ms));
+        }
+
+        async function getApple(){
+            await delay(4000);
+            return "🍎🍎🍎";
+        }
+
+        async function getApple(){
+            await delay(1000);
+            return "🥝🥝🥝";
+        }
+
+        async function getApple(){
+            await delay(1000);
+            return "🥭🥭🥭";
+        }
+
+        async function Sell() {
+            const apple = await getApple(); 
+            const kiwi = await getKiwi();
+            return `${apple} + ${kiwi}`
+        }
+
+
+        sell().then(result=>console.log(result));
+        console.log(sell());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

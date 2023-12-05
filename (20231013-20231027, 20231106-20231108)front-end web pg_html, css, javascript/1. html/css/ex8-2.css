@@ -1,0 +1,34 @@
+/* div{
+	width: 100px;
+	height: 100px;
+	margin:10px;
+	text-align:center;
+} */
+#a, #b, #c, #d{
+	width: 100px;
+	height: 100px;
+	margin:10px;
+	text-align:center;
+}
+#a{
+	background-color:green;
+}
+#b{
+	background-color:green;
+}
+#c{
+	background-color:red;
+	float:right;
+}
+#d{
+	background-color:blue;
+	float:left;
+}
+/* #main{
+	border:soild 1px orange;
+	align-items: center;
+} */
+
+/* float먼저주는 순서대로 해당 방향에 먼저 도착해 있다.
+float속성끼리는 뭉치게 된다. 
+float를 ekfms dkdleldml div로 감싸면*/

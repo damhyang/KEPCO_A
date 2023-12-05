@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        class Animal { 
+            constructor(name) {
+                this.name = name;
+                console.log();
+            }  
+            speak() {
+                console.log(`${this.name} makes a noise.`);
+            }
+            behavior(){
+                console.log(`${this.name} like person.`);
+            } 
+        }
+        
+        class Dog extends Animal{
+            constructor(name){
+                    super(name);
+                }
+            speak(){
+                    console.log(`Override => ${this.name} bow bow`);
+                }           
+        }
+
+        class Cat extends Animal{
+            constructor(name){
+                    super(name);
+                }
+            speak(){
+                    console.log(`Override => ${this.name} meow`);
+                }
+                        
+        }
+
+        class WiildAnimal extends Animal{
+            constructor(name){
+                    super(name);
+                }
+            speak(){
+                    console.log(`Override => ${this.name} cwrrrrrr`);
+                }
+                        
+        }
+
+        const ani = new Animal('ani_name');
+        console.log(ani.name);
+        ani.speak();
+
+        const shushu = new Dog('shushu_name');
+        console.log(shushu.name);
+        shushu.speak();
+
+        cat=new Cat('happy');
+        dog=new Dog('coffee');
+        fox=new Animal('fox');
+
+        console.log(cat.name);
+        cat.speak();
+        console.log(dog.name);
+        dog.speak();
+
+        console.log(fox.name);
+        fox.speak();
+
+        cat.behavior();
+        dog.behavior();
+        fox.behavior();
+
+        hamster=new WiildAnimal('hamster');
+        hamster.speak();
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

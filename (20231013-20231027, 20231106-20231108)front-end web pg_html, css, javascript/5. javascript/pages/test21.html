@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+                let score = 100;
+                console.log(
+                    score >= 60 ? 
+                    (score >= 90 ? 'perfect' : 'good') : 'bad');
+                console.log(
+                    score >= 90 ? 
+                    "perfect" : (score >=60 ? "good" : "bad"));
+
+            }
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!-- 참고사이트 https://blogpack.tistory.com/1212 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KepcoA</title>
+    <style>
+        .wrapper {
+            display: grid; grid-gap: 10px;
+            grid-template-columns: 50px 50px 50px 50px;
+            grid-template-rows: 50px 50px 50px 50px 50px;
+        }
+        div > div {
+            background-color: rgb(207, 232, 220);
+            border: 2px solid rgb(79, 185, 227);
+            padding: 10px; border-radius: 5px;
+        }
+        #zero {
+            grid-column: 4 / 4;
+            grid-row: 4 / 6;
+        }
+        #result{
+            grid-column: 1 / 5;
+            text-align: right;
+        }
+            
+    </style>      
+</head>
+<body>
+    <div class="wrapper">
+        <div id="result"><h1></h1></div>
+        <div class="operator">+</div><div class="operator">-</div><div class="operator">*</div><div class="operator">/</div>
+        <div>7</div><div>8</div><div>9</div><div>=</div>
+        <div>4</div><div>5</div><div>6</div>
+        <div>1</div><div>2</div><div>3</div><div id="zero">0</div>
+    </div>
+    <button><a>Back</a></button>
+</body>
+
+<script>
+    /*버튼(div>div)을 누르면 #result에 누른 값을 띄우기*/
+    const btns = document.querySelectorAll("div>div");
+    for(const i of btns){
+        i.addEventListener("click", ()=>{
+            text=event.target.textContent;
+            console.log(text);
+            document.querySelector("#result").textContent += text;
+        });
+    }
+    document.querySelector("button").addEventListener("click",()=>{
+        text = document.querySelector('h1').innerHTML;
+        size = text.length - 1;
+        text = text.substring(0, size);
+        document.querySelector('h1').innerHTML = text;
+    })
+
+
+    /*console.log(btns);
+    btns.addEventListener("click",(event)=>{
+        data += event.target.innerText;
+        res.textContent=data;
+    });
+    
+    const backBtn=document.querySelector("a");
+    backBtn.addEventListener("click",()=>{
+
+    }); */
+
+    
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KepcoA</title>
+    <script>
+        const h1 = (text) => `<h1>${text}</h1>`;
+        console.log(h1("1번째 태그"));
+    
+        document.body.innerHTML += h1("1번째 head.script태그"); //body온로드 전으로 실행안됨.
+    </script>
+
+</head>
+<body>
+    <script>
+        const h2 = function(text) {
+            return `<h2>${text}</h2>`;
+        } 
+        document.body.innerHTML += h2("2번째 body.script태그"); 
+        document.body.innerHTML += h1("3번째 body.script태그"); 
+    </script>
+</body>
+</html>

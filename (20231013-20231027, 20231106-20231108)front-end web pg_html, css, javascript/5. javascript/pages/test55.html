@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+                const simplePrint1 = function() {
+                      console.log('simplePrint!');
+                }
+                function simplePrint() {
+                    console.log('simplePrint!');
+                }
+                const simplePrint2 = function simplePrint2() {
+                    console.log('simplePrint!');
+              }
+            simplePrint(); 
+            simplePrint1();
+            simplePrint2();        
+            }
+        </script>
+    </head>
+
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+    </body>
+</html>

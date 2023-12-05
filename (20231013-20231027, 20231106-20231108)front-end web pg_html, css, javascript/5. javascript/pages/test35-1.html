@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function excute(){
+                let number= prompt("숫자를 입력하세요.");
+                number = number.toString(); 
+                result=0     
+                for(let i=0; i<number.length; ++i){
+                    result += parseInt(number[i]);
+                }
+                console.log(result);
+            }
+
+        </script>
+    </head>
+    <body>
+        <button type="button" onClick="excute()">실행</button> 
+    </body>
+</html>

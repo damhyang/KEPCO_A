@@ -1,0 +1,24 @@
+<!-- //자바스크립트의 캔버스 객체를 이용하면 애니메이션이 더 좋다. 그러나 일단 이벤트 연습하자. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KepcoA</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <a href='http://ggoreb.com'>이동</a>
+
+</body>
+
+<script>
+    const link = document.querySelector("a");
+    link.addEventListener("click", (event)=>{
+        window.alert("접근할 수 없도록 차단합니다.");
+        //event.stopPropagation();
+    });
+</script>
+</html>

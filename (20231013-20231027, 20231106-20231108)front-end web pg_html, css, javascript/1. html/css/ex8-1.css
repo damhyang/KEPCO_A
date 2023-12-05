@@ -1,0 +1,19 @@
+div{
+	border:solid 1px orange;
+	padding:20px;
+	margin:0 auto;  /*화면 가운데로 이동*/
+	width:800px;
+}
+#box2{
+	text-align:right;
+}
+#box3{
+	text-align:center;
+}
+img{
+	width:400px;
+	height:400px;
+}
+
+
+/* div를 아이디로 풀어쓰면 다음과 같이도 쓸 수 있다. -> #box1, #box2, #box3 */

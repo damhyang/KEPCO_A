@@ -1,0 +1,22 @@
+div{
+	padding:30px;
+	width:600px;
+}
+#intro{
+	border:solid 1px green;
+	border-radius:20px;
+}
+#main h3{
+	border-left:solid 7px orange;
+}
+#intro h3{
+	border-bottom:solid 1px #888888;
+	padding-bottom:5px;
+}
+#main span{
+	font-weight: bold;
+}
+#intro span{
+	font-weight: bold;
+	color:red;
+}

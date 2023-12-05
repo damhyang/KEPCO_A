@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>css선택자</title>
+    <style>
+        span[data-size=large]{font-size: 1.5rem;}
+        p[data-size=large]{font-size: 1.5rem;}
+        *[data-size=large]{font-size: 1.5rem;}
+        span[data-size=small]{font-size: 0.7rem;}
+        li[bg^=yell]{background-color: yellow; color:red}
+    </style>
+</head>
+<body>
+    <p>selector</p>
+    <ul>
+    <li><p>tag</p></li>
+    <li><span>class</span></li>
+    <li><p>id</p></li>
+    <li bg='yellow'><span data-size='large'>
+        attribute</span></li>
+    <li><p>descendant/child</p></li>
+    <li><span data-size='small'>
+         siblings/adjacent</span></li>
+    <li><p data-size='large'>pseudo</p></li>
+    </ul>
+    
+</body>
+</html>

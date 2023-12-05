@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        class Rectangle{
+            constructor(width, height){
+                this.height = height;  
+                this.width=width;
+            }   
+
+            get height() {
+                return this._height;
+            }
+
+            set height(value){
+                this._height=value;
+            }
+
+            area(){
+                console.log(`넓이 ${this.height*this.width}`);
+            }
+
+        }
+        const rec = new Rectangle(10, 20);  
+        console.log(rec.area());
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

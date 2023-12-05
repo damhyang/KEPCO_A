@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>가상클래스 선택자 : nth-child, nth-of-type (자식 요소의 종류 같음)
+    </title>
+    <style>
+        .child > u:nth-child(odd){
+            background-color: coral;
+        }
+        .type > u:nth-of-type(2n){
+            background-color: coral;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="child">
+        <u>1번</u> <u>2번</u> <u>3번</u>
+        <u>4번</u> <u>5번</u> <u>6번</u>
+    </div>
+    <div class="type">
+        <u>1번</u> <u>2번</u> <u>3번</u>
+        <u>4번</u> <u>5번</u> <u>6번</u>
+    </div>
+        
+
+</body>
+</html>
+
